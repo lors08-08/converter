@@ -9,5 +9,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="innoscripta" />
+    <orderEntry type="module" module-name="spaprofilancegroup" />
+    <orderEntry type="module" module-name="todoapp" />
+    <orderEntry type="module" module-name="mozlabru" />
+    <orderEntry type="module" module-name="mozlabru" />
   </component>
 </module>

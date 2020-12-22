@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/converter.iml" filepath="$PROJECT_DIR$/.idea/converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../innoscripta/.idea/innoscripta.iml" filepath="$PROJECT_DIR$/../innoscripta/.idea/innoscripta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mozlabru/.idea/mozlabru.iml" filepath="$PROJECT_DIR$/../mozlabru/.idea/mozlabru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spaprofilancegroup/.idea/spaprofilancegroup.iml" filepath="$PROJECT_DIR$/../spaprofilancegroup/.idea/spaprofilancegroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../JavaScript(6) React Pro/todoapp/.idea/todoapp.iml" filepath="$PROJECT_DIR$/../../JavaScript(6) React Pro/todoapp/.idea/todoapp.iml" />
     </modules>
   </component>
 </project>

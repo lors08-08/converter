@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$/../../JavaScript(6) React Pro/todoapp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../innoscripta" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../innoscripta-testhh" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../mozlabru" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../spaprofilancegroup" vcs="Git" />
   </component>

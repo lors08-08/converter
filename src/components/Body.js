@@ -5,6 +5,7 @@ import Currencies from "./Currencies";
 import { Redirect, Route, Switch } from "react-router-dom";
 
 function Body(props) {
+
   return (
     <div className={styles.box}>
     <Switch>

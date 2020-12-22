@@ -1,6 +1,9 @@
 .box {
   display: flex;
   justify-content: center;
+}
+.mainBox {
+
   width: fit-content;
   height: 300px;
   margin-top: 30px;
@@ -24,6 +27,13 @@
   border-radius: 10px;
   background-color: #fcb813;
 }
+.calculater:hover {
+  color: white;
+  cursor: pointer;
+}
+.box div {
+  height: fit-content;
+}
 .box div input {
   font-size: 24px;
   border: none;
@@ -40,11 +50,16 @@
   box-shadow: 0 0 10px black;
 }
 .select {
-  border: 1px solid lightgrey;
+ width: 200px;
+margin-right: 20px;
+  height: 10px;
+}
+.resultBlock {
+  margin-top: 4em;
   color: white;
-  width: 200px;
-  border-radius: 0 0 5px 5px;
 }
-.select div:hover {
-  background-color: #41658c;
+.result {
+  font-size: 5em;
+  cursor: pointer;
 }
+

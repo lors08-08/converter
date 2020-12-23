@@ -1,0 +1,12 @@
+.list {
+  line-height: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.currency {
+  margin-top: 10px;
+  box-shadow: 0 0 10px lightgrey;
+  border-radius: 10px;
+  padding: 10px 30px 10px 30px;
+  width: 350px;
+}

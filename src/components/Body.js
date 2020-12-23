@@ -4,7 +4,7 @@ import Converter from "./Converter";
 import Currencies from "./Currencies";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-function Body(props) {
+function Body() {
   return (
     <div className={styles.box}>
       <Switch>

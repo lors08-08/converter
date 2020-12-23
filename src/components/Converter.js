@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadRates, setCurrencyFrom, setCurrencyTo } from "../redux/actions";
 import Select from "react-select";
 
-function Converter(props) {
+function Converter() {
   const dispatch = useDispatch();
 
   const rates = useSelector((state) => state.application.rates);
@@ -33,7 +33,7 @@ function Converter(props) {
     dispatch(loadRates(selectValueFrom.toString()));
   };
 
-  const handleCalculate = (e) => {
+  const handleCalculate = () => {
     if (selectValueFrom.length && selectValueTo.length && !loading > 0) {
       setShowResult(true);
       setShowError(false);

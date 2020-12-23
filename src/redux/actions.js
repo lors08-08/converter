@@ -11,14 +11,13 @@ export function loadRates(to) {
           payload: json,
         });
         localStorage.setItem("rates", JSON.stringify(json));
-        console.log(json);
       });
   };
 }
 export function loadMyRates() {
   return (dispatch) => {
     dispatch({ type: "application/loadMyRates/start" });
-    fetch("http://localhost:3010/myRates")
+    fetch("/myRates")
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -31,7 +30,7 @@ export function loadMyRates() {
 export function addCurrency(from, to, result) {
   return (dispatch) => {
     dispatch({ type: "application/addCurrency/start" });
-    fetch("http://localhost:3010/myRates", {
+    fetch("/myRates", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -46,14 +45,13 @@ export function addCurrency(from, to, result) {
       .then((response) => response.json())
       .then((json) => {
         dispatch({
-          type: "application/addCurrency/succeed",
+          type: "/succeed",
           payload: json,
         });
       });
   };
 }
 
-// https://api.exchangeratesapi.io/latest?symbols=${to},${from}
 export function setCurrencyFrom(from) {
   return (dispatch) => {
     dispatch({

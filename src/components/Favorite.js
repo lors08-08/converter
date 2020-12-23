@@ -1,11 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./Currencies.module.css";
-import Star from "../icons/star.svg";
 
 function Favorite() {
   const myRates = useSelector((state) => state.application.myRates);
-  const loading = useSelector((state) => state.application.loadingMyRates);
 
   if (myRates.length === 0) {
     return (
@@ -15,7 +13,6 @@ function Favorite() {
       </>
     );
   }
-  console.log(myRates);
   return (
     <>
       <h1>Мои валюты</h1>

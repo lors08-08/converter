@@ -5,7 +5,7 @@ import Star from "../icons/star.svg";
 import Favorite from "./Favorite";
 import { addCurrency } from "../redux/actions";
 
-function Currencies(props) {
+function Currencies() {
   const dispatch = useDispatch();
 
   const currencyFrom = localStorage.getItem("selectFrom");

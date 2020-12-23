@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Loader from "./components/Loader";
-import styles from "./App.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import NavBar from "./components/NavBar";
 import Body from "./components/Body";
@@ -20,7 +19,7 @@ function App() {
   }
   return (
     <Router>
-      <div className={styles}>
+      <div>
         <NavBar />
         <Body />
       </div>

@@ -8,7 +8,9 @@ function Converter(props) {
   const dispatch = useDispatch();
 
   const rates = useSelector((state) => state.application.rates);
+  const loading = useSelector((state) => state.application.loading);
 
+  const [showError, setShowError] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [amount, setAmount] = useState(1);
   const handleAmount = (e) => {
@@ -28,16 +30,17 @@ function Converter(props) {
   const handleChangeSelectTo = (e) => {
     setSelectValueTo(e.value);
     dispatch(setCurrencyTo(e.value.toString()));
+    dispatch(loadRates(selectValueFrom.toString()));
   };
 
   const handleCalculate = (e) => {
-    dispatch(loadRates(selectValueFrom.toString()));
-    setShowResult(true);
-  };
-  const users = {
-    'barney':  { 'age': 36, 'active': true },
-    'fred':    { 'age': 40, 'active': false },
-    'pebbles': { 'age': 1,  'active': true }
+    if (selectValueFrom.length && selectValueTo.length && !loading > 0) {
+      setShowResult(true);
+      setShowError(false);
+    }
+    {
+      setShowError(true);
+    }
   };
 
   const options = [
@@ -67,6 +70,7 @@ function Converter(props) {
         <div>
           <div className={styles.title}>Конвертировать из</div>
           <Select
+            placeholder="Выбрать валюту"
             onChange={handleChangeSelectFrom}
             className={styles.select}
             options={options}
@@ -75,6 +79,7 @@ function Converter(props) {
         <div>
           <div className={styles.title}>Конвертировать в</div>
           <Select
+            placeholder="Выбрать валюту"
             onChange={handleChangeSelectTo}
             className={styles.select}
             options={options}
@@ -94,9 +99,12 @@ function Converter(props) {
               {amount.length === 0 ? 1 : amount + selectValueFrom} ={}
             </div>
             <div className={styles.result}>
-              {amount * rates.conversion_rates?.RUB}
+              {amount * rates.conversion_rates?.[selectValueTo]}
             </div>
           </>
+        )}
+        {showError === false && (
+          <div className={styles.error}>Выберите валюту</div>
         )}
       </div>
     </div>

@@ -1,8 +1,12 @@
+const localData = JSON.parse(localStorage.getItem("rates"));
+console.log(localData);
 const initialState = {
   loading: false,
-  rates: {},
+  loadingMyRates: false,
+  rates: localData,
   currencyFrom: null,
   currencyTo: null,
+  myRates: [],
 };
 
 function application(state = initialState, action) {
@@ -10,7 +14,7 @@ function application(state = initialState, action) {
     case "application/load/start":
       return {
         ...state,
-        loading: false,
+        loading: true,
       };
     case "application/load/succeed":
       return {
@@ -28,6 +32,28 @@ function application(state = initialState, action) {
         ...state,
         rates: action.payload,
         currencyTo: action.payload,
+      };
+    case "application/loadMyRates/start":
+      return {
+        ...state,
+        loadingMyRates: true,
+      };
+    case "application/loadMyRates/succeed":
+      return {
+        ...state,
+        loadingMyRates: false,
+        myRates: action.payload,
+      };
+    case "application/addCurrency/start":
+      return {
+        ...state,
+        loadingMyRates: true,
+      };
+    case "application/addCurrency/succeed":
+      return {
+        ...state,
+        loadingMyRates: false,
+        myRates: [...state.myRates, action.payload],
       };
     default:
       return state;

@@ -15,5 +15,6 @@
     <orderEntry type="module" module-name="mozlabru" />
     <orderEntry type="module" module-name="mozlabru" />
     <orderEntry type="module" module-name="innoscripta" />
+    <orderEntry type="module" module-name="todoapp" />
   </component>
 </module>

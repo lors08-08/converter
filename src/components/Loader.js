@@ -1,11 +1,7 @@
-import React from 'react';
-
+import React from "react";
+import styles from "./Body.module.css";
 function Loader() {
-  return (
-    <div>
-      Идет загрузка
-    </div>
-  );
+  return <div className={styles.loader}>Идет загрузка</div>;
 }
 
 export default Loader;

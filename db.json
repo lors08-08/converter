@@ -1,0 +1,10 @@
+{
+  "myRates": [
+    {
+      "from": "USD",
+      "to": "RUB",
+      "result": 75,
+      "id": 1
+    }
+  ]
+}

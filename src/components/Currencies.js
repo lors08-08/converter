@@ -1,10 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Currencies.module.css";
-import Loader from "./Loader";
+import Star from "../icons/star.svg";
+import Favorite from "./Favorite";
+import { addCurrency } from "../redux/actions";
 
 function Currencies(props) {
-  const currencyFrom = useSelector((state) => state.application.currencyFrom);
+  const dispatch = useDispatch();
+
+  const currencyFrom = localStorage.getItem("selectFrom");
   const rates = useSelector((state) => state.application.rates);
   const options = [
     { value: "USD", label: "USD-США доллар" },
@@ -17,16 +21,38 @@ function Currencies(props) {
     { value: "JPY", label: "JPY-Японская иена " },
     { value: "KRW", label: "KRW-Южнокорейская вона" },
   ];
-  if (rates.conversion_rates === undefined) {
+
+  if (rates === null) {
     return <h2>Выберите валюту</h2>;
   }
   return (
     <div className={styles.list}>
+      <Favorite />
       <h1>Курсы валют</h1>
       {options.map((item) => {
+        const ratesNew = Object.keys(rates.conversion_rates).find(
+          (rate) => rate === item.value
+        );
         return (
-          <div className={styles.currency}>
-            {currencyFrom} > {item.value} = {rates.conversion_rates.RUB}
+          <div key={item.label} className={styles.currency}>
+            {currencyFrom} > {item.value} ={" "}
+            {rates.conversion_rates[item.value] + ratesNew}
+            <div>
+              <img
+                onClick={() => {
+                  dispatch(
+                    addCurrency(
+                      currencyFrom,
+                      item.value,
+                      rates.conversion_rates[item.value]
+                    )
+                  );
+                }}
+                src={Star}
+                alt="img"
+                width={20}
+              />
+            </div>
           </div>
         );
       })}

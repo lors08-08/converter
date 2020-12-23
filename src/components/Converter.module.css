@@ -3,7 +3,6 @@
   justify-content: center;
 }
 .mainBox {
-
   width: fit-content;
   height: 300px;
   margin-top: 30px;
@@ -18,11 +17,11 @@
 .calculater {
   color: #002272;
   font-weight: 700;
-  line-height: 42px;
+  line-height: 50px;
   text-align: center;
   margin: auto;
-  height: 42px;
-  width: 42px;
+  height: 50px;
+  width: 50px;
   font-size: 30px;
   border-radius: 10px;
   background-color: #fcb813;
@@ -32,7 +31,6 @@
   cursor: pointer;
 }
 .box div {
-  height: fit-content;
 }
 .box div input {
   font-size: 24px;
@@ -50,8 +48,8 @@
   box-shadow: 0 0 10px black;
 }
 .select {
- width: 200px;
-margin-right: 20px;
+  width: 200px;
+  margin-right: 20px;
   height: 10px;
 }
 .resultBlock {
@@ -62,4 +60,8 @@ margin-right: 20px;
   font-size: 5em;
   cursor: pointer;
 }
-
+.error {
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+}

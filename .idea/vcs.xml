@@ -7,5 +7,6 @@
     <mapping directory="$PROJECT_DIR$/../innoscripta-testhh" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../mozlabru" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../spaprofilancegroup" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../todoapp" vcs="Git" />
   </component>
 </project>

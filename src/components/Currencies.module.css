@@ -4,9 +4,21 @@
   text-align: center;
 }
 .currency {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
   box-shadow: 0 0 10px lightgrey;
   border-radius: 10px;
   padding: 10px 30px 10px 30px;
   width: 350px;
+}
+.currency div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+.currency div:hover {
+  filter: grayscale(0%);
 }

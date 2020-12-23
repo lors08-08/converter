@@ -1,6 +1,6 @@
-import React from 'react';
-import styles from "./NavBar.module.css"
-import {NavLink, Redirect} from "react-router-dom";
+import React from "react";
+import styles from "./NavBar.module.css";
+import { NavLink, Redirect } from "react-router-dom";
 
 function NavBar(props) {
   return (
